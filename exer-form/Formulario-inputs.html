@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<!-- Este projeto para estudar FORMULARIOS no HTML usando input, label e outros
+https://www.w3schools.com/html/html_form_input_types.asp
+https://pt.stackoverflow.com/questions/480251/op%C3%A7%C3%B5es-no-input-com-html
+-->
+
+<html lang="pt-br"> 
+    <!-- atributo lang aplica é a declaraão de idioma estará sendo escrito os caracteres do código campo head-->
+
+    <head>
+    <!--tag meta aplicamos como etiquetas para metadados, facilita pesquisa buscadores sobre conteudo da pagina-->
+        <meta charset="UTF-8"> <!--atributo charset aplica caracteres usados no codigo; UTF-8 engloba caracteres mundiais-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scaled=1.0">
+        <title>Usando formulario</title>
+        
+    </head>
+    <body>
+        <h1>INSCRIÇÃO PARA PROGRAMA DE QUALIFICAÇÃO PROFISSIONAL</h1>
+        <h2>Formulário de inscrição</h2>
+        <b>
+    <!--Tag Form, recebe dados do usuario, envia para servidor onde processa uma resposta adequada-->   
+        <form>
+    <!--tag form trabalha c/elementos Label e Inputs, p/forma do formulario;label cria rótulo no HTML;input cria caixa-->        
+            <label for="Nome">Insira Nome</label>
+            <input type="Text"><br><br> <!--Tag br,quebra a informação em linhas diferentes;repetir pulará + linhas-->
+            <label for="Sobrenome">Insira Sobrenome</label>
+            <input type="Text"><br><br>
+            <label for="Identidade">Insira RG</label> <!--atributo for, indica Id do elemento no formulário-->
+            <input type="number"><br><br>
+            <label form="CPF">Insira CPF</label> <!--#### DUVIDA: Porque number tem um drops??-->
+            <input type="number"><br><br>
+            <label form="DNascido">Informe data nascimento</label> <!--#### DUVIDA: como colocar formatação de data??-->
+            <input type="date"><br><br> <!--o atributo Date coloca formatação dd/mm/aaaa e mostra calendario-->
+            <label for="Instrução">Informe sua formação</label> <!--#### DUVIDA: como colocar um lista para escolher no input?-->
+            <input type="text" list="grau"> <!--no exemplo, usa o placeholder como uma indicação do que colocar na caixa-->
+            <datalist id="grau"> <!--Id como atrivuto no datalist, associa a lista no datalist ao elemento grau criado no atributo list-->
+                <option value="Fundamental"></option>
+                <option value="Médio"></option>
+                <option value="Superior em andamento"></option>
+                <option value="Graduado"></option>
+            </datalist><br><br>
+
+            <label form="Orientação sexual">Informe como se identifica</label><br><br> <!--atributo form, indica a qual formulario o rotulo pertecen-->
+    <!--#### DUVIDA: nao entendi a diferença entre Label for e label form-->           
+    <!--#### DUVIDA: associação de elementos Id, Name, Value São realmente necessários??-->
+    <!-- o atributo id no HTML identifica elemento, algo exclusivo, unico na pagina; ñ há dois elementos com mesma ID; Referencia para Javascript comandar, CSS estilizar-->
+    <!-- elemento name no HTML, especifica um nome para o elemento-->
+    <!-- elemento Value no HTML, da valor para um elemento -->
+                <input type="radio" id="html-a" name="fav_language" value="HCis"> <!--#### DUVIDA: pq apagar value e id, nao interfere no form?-->
+                <label for="html">Homem Cisgenero</label><br><br>
+                <input type="radio" id="html-b" name="fav_language" value="MCis"> <!--#### DUVIDA: o que trata o fav_language? escolha favorita?-->
+                <label for="html">Mulher Cisgenero</label><br><br>
+                <input type="radio" id="html-c" name="fav_language" value="Trans">
+                <label for="html">Transgenero</label><br><br>
+                <input type="radio" id="html-d" name="fav_language" value="NaoInforma">
+                <label for="html">Prefiro não Informar</label><br><br>
+            <label for="Email">Informe e-mail</label>
+            <input type="text"><br><br>
+            <label for="link">Informe linkedin</label>
+            <input type="text"><br><br>
+            <br><br>
+            <p>SOMENTE TESTANDO PAGINA</p>
+            
+            <input type="submit" value="Matricular">
+            <input type="submit" value="Cancelar">
+        </b>
+        </form>   
+
+    </body>
+
+
+
+
+
+
+</html>
